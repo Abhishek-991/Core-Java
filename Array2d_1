@@ -1,0 +1,38 @@
+import java.util.*;
+public class Array2d_1
+{
+	public static void main(String[] st)
+	{
+		int a[][],r,c,s;
+		System.out.print("ENTER ROW:");
+		Scanner scan=new Scanner(System.in);
+		r=scan.nextInt();
+		for(int i=0;i<r;i++)
+		{
+			System.out.print("ENTER COLUMN FOR "+(i+1)+" ROW : ");
+			c=scan.nextInt();
+			a[i]=new int[c];
+		}
+		
+		for(int i=0;i<r;i++)
+		{
+			for(int j=0;j<=i;j++)
+			{
+				System.out.print("ENTER NO FOR "+(i+1)+"ROW AND "+(j+1)+"COLUMN : ");
+				a[i][j]=scan.nextInt();
+			}
+		}
+		
+		for(int x[]:a)
+		{
+			for(int y:x)
+			{
+				System.out.println(y);
+				s=s+y;
+			}
+		}
+		System.out.print("\n\n\tSUM= "+s);
+		
+		
+	}
+}	
